@@ -59,95 +59,97 @@ body {
     display: none;
  }
 
- @media screen and (max-width: 768px) {
+ @media screen and (max-width: 1024px) {
     .wrapper {
         display: block;
         position: static;
-        z-index: 902;
-    }
-    
-    .burgermenu {
+        z-index: 902;              
+      }
+      .burgermenu {
         position: fixed;
         right: 0;
-        top: 100px; 
-        width: 100%;
-        height: 0; 
+        top: 0;          
+        width: 60%;                 
+        height: 100vh;             
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        background-color: #242323;
-        overflow: hidden;
-        transition: height 0.3s ease; 
-        z-index: 903;
-        padding-left: 20px;
-    }
-    
-    .burgermenu_active {
-        height: 20%;
-    }
-    
-    .burger-list {
+        align-items: center;
+        justify-content: center;
+        background-color: #090909;    
+        opacity: 0.9;   
+        transition: 1s;                   
+        transform: translateX(100%);   
+      }
+      .burgermenu_active {
+        transform: translateX(0%);
+      }
+      .burger-list {
         display: flex;
-        flex-direction: column;
         justify-content: space-around;
-        align-items: flex-start;
-        height: 100%;
-    }
-    
-    .burger-list a {
-        text-decoration: none;
-        font-weight: 600;
+        align-items: center;                               
+        height: 80%;                              
+        flex-direction: column;
+      }
+      .burger-list a {
+        text-decoration: none;                     
+        text-transform: uppercase;                 
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
         font-style: normal;
-        color: #55595c;
-        font-size: 14px;
-    }
-    
-    .burger-button {
+        color: rgba(255, 255, 255, .5);                    
+      }
+      .burger-button {
         display: flex;
         flex-direction: column;
-        gap: 4px;
-        width: 50px;
-        height: 43px;
+        gap: 1px;
+        width: 50px;                         
+        height: 40px;                                              
         position: absolute;
-        right: 20px;
-        top: 30px;
-        z-index: 904;
-    }
-    
-    .close {
+        right: 0%;                             
+        top: 15px;                              
+        border-radius: 10px;                                 
+        opacity: 1;                              
+        }
+      .close {
         display: block;
         width: 20px;
         height: 20px;
         position: absolute;
-        top: 20%;
-        right: 5%;
-        transform: translate(50%, -50%);
+        top: 5%;
+        right:10%;
         cursor: pointer;
-    }
-    
-    .close:before,
-    .close:after {
+      }
+        .close:before,
+        .close:after {
         content: '';
         position: absolute;
+        top: 10%;
+        right:10%;
         width: 3px;
-        height: 20px;
-        background:#494c4f;
-    }
-    
-    .close:before {
-        transform: rotate(45deg);
-    }
-    
-    .close:after {
-        transform: rotate(-45deg);
-    }
-    
-    .burger-button div {
-        width: 25px;
-        height: 3px;
-        background-color: #fff;
-    }
+        height: 20px; 
+        background: rgb(255, 255, 255); 
+        }
+
+        .close:before {
+        transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .close:after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      .burger-button div {      
+        margin-top: 5px;   
+        width: 30px;                              
+        height: 3px;                             
+        background-color: #f2f2f3;  
+        position: relative;                                      
+      }
+      .burger-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap:10px;
+      }
+      
  }
 
 /* text */
@@ -198,7 +200,7 @@ body {
     width: 100%;
 }
 .text__btn {
-    width: 280px;
+    width: 220px;
     height: 60px;
     background-color:rgba(155, 252, 77, 1);
     border:none;
