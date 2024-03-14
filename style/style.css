@@ -479,8 +479,7 @@ table {
 }
 
 td {
-    border: 3px solid rgba(155, 252, 77, 1);
-    text-align: center;
+    border: 4px groove  rgba(155, 252, 77, 1);
     padding: 10px;
     color: #666666;
     font-size: 16px;
@@ -578,7 +577,7 @@ td {
  }
 .faq-title {
     color: black;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: 600;
     line-height: 1.5;
     font-style: normal;
@@ -613,8 +612,7 @@ td {
     
      }
     .faq-title {
-        font-size: 25px;
-        margin-bottom: 10px;
+         margin-bottom: 10px;
      }
     .faq__box {
         gap:50px;
